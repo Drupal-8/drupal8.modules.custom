@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Provide structure for the administrative interface.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mymodule_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.mymodule':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Drupal 8 - Custom Module Development') . '</p>';
+      $output .= '<p>' . t('Developed by: <a href="@url" target="_blank">@author</a>', array('@author' => 'Chhabi Pachabhaiya', '@url' => 'http://c.pachabhaiya.com'));
+      return $output;
+  }
+}

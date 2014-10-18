@@ -1,0 +1,14 @@
+mymodule.mypage:
+  path: '/mypage'
+  defaults:
+    _content: '\Drupal\mymodule\Controller\MymoduleController::showPage'
+    _title: 'Title of the page'
+  requirements:
+    _permission: 'access content'
+
+mymodule.conf:
+  path: '/admin/config/mymodule'
+  defaults:
+    _title: 'My Module'
+  requirements:
+    _permission: 'administer site configuration'
