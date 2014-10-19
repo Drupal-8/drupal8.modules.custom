@@ -26,4 +26,16 @@ class MymoduleController extends ControllerBase {
     );
     return $build;
   }
+
+  public function myPage3($arg1, $arg2) {
+    $list[] = t('Argument 1 = @arg1', array('@arg1' => $arg1));
+    $list[] = t('Argument 2 = @argument2', array('@argument2' => $arg2));
+    $build['mymodule.page3'] = array(
+      '#theme' => 'item_list',
+      '#items' => $list,
+      '#list_type' => 'ol',
+      '#title' => t('Example of page containing arguments.'),
+    );
+    return $build;
+  }
 }
