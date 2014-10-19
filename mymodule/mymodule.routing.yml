@@ -1,3 +1,5 @@
+# Create a custom page.
+# Link to custom page: http://drupal8.dev/page1
 mymodule.page1:
   path: '/page1'
   defaults:
@@ -6,6 +8,7 @@ mymodule.page1:
   requirements:
     _permission: 'access content'
 
+# Add "Configure" link in the "Extends" (admin/modules) page.
 mymodule.conf:
   path: '/admin/config/mymodule'
   defaults:
