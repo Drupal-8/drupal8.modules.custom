@@ -8,6 +8,14 @@ mymodule.page1:
   requirements:
     _permission: 'access content'
 
+mymodule.page2:
+  path: '/mymodule/page2'
+  defaults:
+    _content: '\Drupal\mymodule\Controller\MymoduleController::myPage2'
+    _title: 'Page 2'
+  requirements:
+    _permission: 'access mymodule page2'
+
 # Add "Configure" link in the "Extends" (admin/modules) page.
 mymodule.conf:
   path: '/admin/config/mymodule'

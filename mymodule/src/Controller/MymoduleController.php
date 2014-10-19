@@ -18,4 +18,12 @@ class MymoduleController extends ControllerBase {
     );
     return $build;
   }
+
+  public function myPage2() {
+    $build = array(
+      '#type' => 'markup',
+      '#markup' => t('If you are seeing this page then you have permission to access this page.'),
+    );
+    return $build;
+  }
 }

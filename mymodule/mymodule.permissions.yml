@@ -1,0 +1,3 @@
+access mymodule page2:
+  title: 'Access http://drupal8.dev/page2'
+  description: 'Permission to access page2.'
