@@ -1,7 +1,7 @@
-mymodule.mypage:
-  path: '/mypage'
+mymodule.page1:
+  path: '/page1'
   defaults:
-    _content: '\Drupal\mymodule\Controller\MymoduleController::showPage'
+    _content: '\Drupal\mymodule\Controller\MymoduleController::myPage1'
     _title: 'Title of the page'
   requirements:
     _permission: 'access content'

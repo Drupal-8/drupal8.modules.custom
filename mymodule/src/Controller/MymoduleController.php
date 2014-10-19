@@ -11,7 +11,7 @@ class MymoduleController extends ControllerBase {
     return new static($container->get('module_handler'));
   }
 
-  public function showPage() {
+  public function myPage1() {
     $build = array(
       '#type' => 'markup',
       '#markup' => t('Hello world !!!'),
