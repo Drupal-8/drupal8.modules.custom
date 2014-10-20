@@ -7,6 +7,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use Drupal\Core\Url;
 
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+
 class MymoduleController extends ControllerBase {
 
   public static function create(ContainerInterface $container) {
@@ -30,6 +32,11 @@ class MymoduleController extends ControllerBase {
   }
 
   public function myPage3($arg1, $arg2) {
+    // Show standard "Access Denied" page if the arguments are not numeric.
+    if (!is_numeric($arg1) || !is_numeric($arg2)) {
+      throw new AccessDeniedHttpException();
+    }
+
     $list[] = t('Argument 1 = @arg1', array('@arg1' => $arg1));
     $list[] = t('Argument 2 = @argument2', array('@argument2' => $arg2));
 
