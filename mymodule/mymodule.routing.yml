@@ -29,5 +29,6 @@ mymodule.admin_page:
   path: '/admin/config/development/mymodule'
   defaults:
     _title: 'My Module'
+    _form: '\Drupal\mymodule\Form\MymoduleAdmin'
   requirements:
     _permission: 'administer site configuration'
