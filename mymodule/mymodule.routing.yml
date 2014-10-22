@@ -25,8 +25,8 @@ mymodule.page3:
     _permission: 'access content'
 
 # Add "Configure" link in the "Extends" (admin/modules) page.
-mymodule.conf:
-  path: '/admin/config/mymodule'
+mymodule.admin_page:
+  path: '/admin/config/development/mymodule'
   defaults:
     _title: 'My Module'
   requirements:

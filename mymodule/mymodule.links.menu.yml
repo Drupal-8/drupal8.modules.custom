@@ -1,0 +1,6 @@
+mymodule.admin_page:
+  title: 'My Module'
+  description: 'Drupal 8 module development.'
+  route_name: mymodule.admin_page
+  weight: -30
+  parent: system.admin_config_development
