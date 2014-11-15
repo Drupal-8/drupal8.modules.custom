@@ -2,15 +2,19 @@
 
 /**
  * @file
- * Provide structure for the administrative interface.
+ * Module file for d8_block_example module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Unicode;
 
 /**
  * Implements hook_help().
  */
 function d8_block_example_help($route_name, RouteMatchInterface $route_match) {
+
+  // dpm($route_match);
+
   switch ($route_name) {
     case 'help.page.d8_block_example':
       $output = '';
@@ -18,5 +22,14 @@ function d8_block_example_help($route_name, RouteMatchInterface $route_match) {
       $output .= '<p>' . t('Drupal 8 - Block Example') . '</p>';
       $output .= '<p>' . t('Author: <a href="@url" target="_blank">@author</a>', array('@author' => 'Chhabi Pachabhaiya', '@url' => 'http://c.pachabhaiya.com'));
       return $output;
+  }
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function d8_block_example_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+  if (isset($build['#plugin_id']) && $build['#plugin_id'] == 'd8_block_example_alter_block') {
+    $build['#configuration']['label'] = Unicode::strtoupper($build['#configuration']['label']) . " - " . t('Overridden');
   }
 }
