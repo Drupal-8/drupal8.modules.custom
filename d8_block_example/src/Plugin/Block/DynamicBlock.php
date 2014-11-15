@@ -41,8 +41,6 @@ class DynamicBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-
-    dpm($this->configuration);
     return array(
       '#type' => 'markup',
       '#markup' => $this->configuration['d8_block_example_default_markup'],
