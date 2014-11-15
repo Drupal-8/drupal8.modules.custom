@@ -7,7 +7,7 @@
 
 namespace Drupal\d8_block_example\Plugin\Block;
 
-use Drupal\Core\block\BlockBase;
+use Drupal\Core\Block\BlockBase;
 
 /**
  * Provides a 'Drupal 8 - Block Example : static block' block.
