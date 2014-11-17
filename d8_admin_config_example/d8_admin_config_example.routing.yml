@@ -1,8 +1,8 @@
 # Add "Configure" link in the "Extends" (admin/modules) page.
-d8_admin_config_example.admin_config:
+d8_admin_config_example.settings:
   path: '/admin/config/development/d8_admin_config_example'
   defaults:
     _title: 'Drupal 8 - Admin Config Example'
-    _form: '\Drupal\d8_admin_config_example\Form\AdminConfigExampleForm'
+    _form: '\Drupal\d8_admin_config_example\Form\SettingsForm'
   requirements:
     _permission: 'administer site configuration'

@@ -4,4 +4,4 @@ description: 'Drupal 8 - Admin Config Example : Custom module development'
 package: Custom
 version: VERSION
 core: 8.x
-configure: d8_admin_config_example.admin_config
+configure: d8_admin_config_example.settings

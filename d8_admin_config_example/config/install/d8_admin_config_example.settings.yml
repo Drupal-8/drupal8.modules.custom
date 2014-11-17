@@ -1,0 +1,6 @@
+textfield_example: 'Textfield example'
+textarea_example: 'Textarea example'
+
+full_name:
+  first_name: 'Your first name here'
+  last_name: 'Your last name here'
