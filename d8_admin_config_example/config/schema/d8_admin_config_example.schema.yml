@@ -1,0 +1,22 @@
+# Schema for the configuration files of the Drupal 8 - Admin Config Example module.
+
+d8_admin_config_example.settings:
+  type: mapping
+  label: Drupal 8 - Admin Config Example
+  mapping:
+    textfield_example:
+      type: string
+      label: 'Textfield example'
+    textarea_example:
+      type: string
+      label: 'Textarea example'
+    full_name:
+      type: mapping
+      label: 'Full name'
+      mapping:
+        first_name:
+          type: string
+          label: 'First name'
+        last_name:
+          type: string
+          label: 'Last name'
