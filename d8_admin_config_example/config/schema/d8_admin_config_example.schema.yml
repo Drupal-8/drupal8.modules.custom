@@ -2,13 +2,13 @@
 
 d8_admin_config_example.settings:
   type: mapping
-  label: Drupal 8 - Admin Config Example
+  label: 'Drupal 8 - Admin Config Example'
   mapping:
     textfield_example:
       type: string
       label: 'Textfield example'
     textarea_example:
-      type: string
+      type: text
       label: 'Textarea example'
     full_name:
       type: mapping
