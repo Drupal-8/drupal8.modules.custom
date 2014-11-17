@@ -30,34 +30,35 @@ class SettingsForm extends ConfigFormBase {
 
     $form['d8_admin_config_example_textfield'] = array(
       '#type' => 'textfield',
-      '#title' => t('Textfield example'),
-      '#description' => t('Textfield description here.'),
+      '#title' => $this->t('Textfield example'),
+      '#description' => $this->t('Textfield description here.'),
       '#default_value' => $config->get('textfield_example'),
     );
 
     $form['d8_admin_config_example_textarea'] = array(
       '#type' => 'textarea',
-      '#title' => t('Textarea example'),
-      '#description' => t('Textarea description here.'),
+      '#title' => $this->t('Textarea example'),
+      '#description' => $this->t('Textarea description here.'),
       '#default_value' => $config->get('textarea_example'),
     );
 
     $form['d8_admin_config_example_full_name'] = array(
-      '#type' => 'fieldset',
+      '#type' => 'details',
       '#title' => t('Full name'),
+      '#open' => TRUE,
     );
 
     $form['d8_admin_config_example_full_name']['d8_admin_config_example_first_name'] = array(
       '#type' => 'textfield',
-      '#title' => t('First name'),
-      '#description' => t('Enter your first name.'),
+      '#title' => $this->t('First name'),
+      '#description' => $this->t('Enter your first name.'),
       '#default_value' => $config->get('full_name.first_name'),
     );
 
     $form['d8_admin_config_example_full_name']['d8_admin_config_example_last_name'] = array(
       '#type' => 'textfield',
-      '#title' => t('Last name'),
-      '#description' => t('Enter your last name.'),
+      '#title' => $this->t('Last name'),
+      '#description' => $this->t('Enter your last name.'),
       '#default_value' => $config->get('full_name.last_name'),
     );
 
@@ -71,7 +72,7 @@ class SettingsForm extends ConfigFormBase {
 
     // Validate empty textfield.
     if ($form_state->isValueEmpty('d8_admin_config_example_textfield')) {
-      // $form_state->setError($form['d8_admin_config_example_textfield'], t('Textfield example field should not be left empty.'));
+      // $form_state->setError($form['d8_admin_config_example_textfield'], $this->t('Textfield example field should not be left empty.'));
       $form_state->setErrorByName('d8_admin_config_example_textfield', $this->t('Textfield example field should not be left empty.'));
     }
 
