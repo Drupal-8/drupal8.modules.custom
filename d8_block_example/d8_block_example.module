@@ -12,9 +12,6 @@ use Drupal\Component\Utility\Unicode;
  * Implements hook_help().
  */
 function d8_block_example_help($route_name, RouteMatchInterface $route_match) {
-
-  // dpm($route_match);
-
   switch ($route_name) {
     case 'help.page.d8_block_example':
       $output = '';
